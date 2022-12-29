@@ -70,11 +70,13 @@ class ManageSocialIcon {
             	$twitter = isset($_POST['twitter'])? $_POST['twitter'] : '';
             	$linkdin = isset($_POST['linkdin'])? $_POST['linkdin'] : '';
             	$digg = isset($_POST['digg'])? $_POST['digg'] : '';
+            	$pinterest = isset($_POST['pinterest'])? $_POST['pinterest'] : '';
 
                 update_option( 'facebook-ssp', $facebook );
                 update_option( 'twitter-ssp', $twitter );
                 update_option( 'linkdin-ssp', $linkdin );
                 update_option( 'digg-ssp', $digg );
+                update_option( 'pinterest-ssp', $pinterest );
             } 
 
         ?>
@@ -109,6 +111,12 @@ class ManageSocialIcon {
 						  <input type="checkbox" name="digg" id="digg" <?php if(get_option('digg-ssp')){ echo 'checked'; } ?>>
 						  <span class="slider round"></span>
 						</label><span>Digg</span>
+                    </div><br>
+                    <div class="form-group">
+                    	<label class="switch" for="pinterest">
+						  <input type="checkbox" name="pinterest" id="pinterest" <?php if(get_option('pinterest-ssp')){ echo 'checked'; } ?>>
+						  <span class="slider round"></span>
+						</label><span>Pinterest</span>
                     </div><br>
 
                     <input type="submit" name="submit" value="Save" class="btn btn-primary my-1">

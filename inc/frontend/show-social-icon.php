@@ -41,7 +41,7 @@ class ShowSocialShare
 	        	<?php if(get_option('facebook-ssp')): ?>
 		        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo esc_url($permalink); ?>"
 		            onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" class="btn"
-		            target="_blank" title="<?php esc_attr_e('Share on Facebook', 'breezycv-share-buttons'); ?>">
+		            target="_blank" title="<?php esc_attr_e('Share on Facebook', 'ssp'); ?>">
 		            <i class="fa-brands fa-facebook"></i>
 		        </a>
 		    	<?php endif; ?>
@@ -49,22 +49,27 @@ class ShowSocialShare
 		    	<?php if(get_option('twitter-ssp')): ?>
 		        <a href="https://twitter.com/share?url=<?php echo esc_url($permalink); ?>"
 		            onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" class="btn"
-		            target="_blank" title="<?php esc_attr_e('Share on Twitter', 'breezycv-share-buttons'); ?>">
+		            target="_blank" title="<?php esc_attr_e('Share on Twitter', 'ssp'); ?>">
 		            <i class="fa-brands fa-twitter"></i>
 		        </a>
 		        <?php endif; ?>
 
 		        <?php if(get_option('linkdin-ssp')): ?>
 		        <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo esc_url($permalink); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn"
-		            title="<?php esc_attr_e('Share on LinkedIn', 'breezycv-share-buttons'); ?>">
+		            title="<?php esc_attr_e('Share on LinkedIn', 'ssp'); ?>">
 		            <i class="fa-brands fa-linkedin"></i>
 		        </a>
 		        <?php endif; ?>
 
 		        <?php if(get_option('digg-ssp')): ?>
 		        <a href="http://www.digg.com/submit?url=<?php echo esc_url($permalink); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn"
-		            title="<?php esc_attr_e('Share on Digg', 'breezycv-share-buttons'); ?>">
+		            title="<?php esc_attr_e('Share on Digg', 'ssp'); ?>">
 		            <i class="fa-brands fa-digg"></i>
+		        </a>
+		        <?php endif; ?>
+		        <?php if(get_option('pinterest-ssp')): ?>
+		        <a href="http://pinterest.com/pin/create/bookmarklet/?url=<?php echo esc_url($permalink);?>&amp;is_video=false&amp;description=<?php esc_url(the_title());?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn" title="<?php esc_attr_e('Share on Pinterest', 'ssp'); ?>">
+		        	<i class="fa-brands fa-pinterest"></i>
 		        </a>
 		        <?php endif; ?>
 	        </div>
