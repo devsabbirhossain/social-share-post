@@ -47,7 +47,7 @@ class SocialShare
 	public function activation_hook(){
 		update_option( 'facebook-ssp', true );
         update_option( 'linkdin-ssp', true );
-        delete_option( 'beforeContent-ssp', true );
+        update_option( 'beforeContent-ssp', true );
 	}
 
 	//this function will work when this plugin will deactivate
@@ -69,16 +69,16 @@ class SocialShare
 	}
 
 	public function add_scripts_frontend(){
-		wp_enqueue_style( 'font-styles-all', plugins_url( '/assets/css/fontawesome/css/all.min.css', __FILE__ ));
-		wp_enqueue_style( 'font-styles-brands', plugins_url( '/assets/css/fontawesome/css/brands.min.css', __FILE__ ) );
-		wp_enqueue_style( 'custom-style-plugin', plugins_url( '/assets/css/style.css', __FILE__ ));
+		wp_enqueue_style( 'font-styles-all', plugins_url( '/assets/admin/css/fontawesome/css/all.min.css', __FILE__ ));
+		wp_enqueue_style( 'font-styles-brands', plugins_url( '/assets/admin/css/fontawesome/css/brands.min.css', __FILE__ ) );
+		wp_enqueue_style( 'custom-style-plugin', plugins_url( '/assets/frontend/css/style.css', __FILE__ ));
 	}
 
 	public function add_scripts_admin_page(){
 		wp_enqueue_style( 'bootstrap-plugin', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
-		wp_enqueue_style( 'font-styles-all', plugins_url( '/assets/css/fontawesome/css/all.min.css', __FILE__ ));
-		wp_enqueue_style( 'font-styles-brands', plugins_url( '/assets/css/fontawesome/css/brands.min.css', __FILE__ ) );
-		wp_enqueue_style( 'custom-style-plugin', plugins_url( '/assets/css/style.css', __FILE__ ));
+		wp_enqueue_style( 'font-styles-all', plugins_url( '/assets/admin/css/fontawesome/css/all.min.css', __FILE__ ));
+		wp_enqueue_style( 'font-styles-brands', plugins_url( '/assets/admin/css/fontawesome/css/brands.min.css', __FILE__ ) );
+		wp_enqueue_style( 'custom-style-plugin', plugins_url( '/assets/admin/css/style.css', __FILE__ ));
 	}
 }
 
